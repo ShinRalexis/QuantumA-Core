@@ -1,0 +1,19 @@
+services:
+  quantuma-core:
+    build: .
+    container_name: quantuma-core
+    ports:
+      - "8227:8227"
+    # Mapping per la GPU NVIDIA
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    # Riavvia automaticamente il simulatore al boot o se crasha
+    restart: always
+    environment:
+      - QUANTUM_API_PORT=8227
+      - QUANTUM_API_HOST=0.0.0.0

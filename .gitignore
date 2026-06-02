@@ -1,0 +1,38 @@
+# Ambienti virtuali e build (pesanti, ricostruiti da requirements.txt)
+.venv-cuda/
+.venv/
+venv/
+env/
+Distribuzione Windows/
+dist/
+build/
+*.egg-info/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# File archiviati (non pubblicati)
+_archive/
+
+# Backup e log
+*.bak
+*.bak-*
+*.log
+*.tmp
+
+# Output generati dagli script di esempio/benchmark
+QAOA_RESULTS_28Q.txt
+*_results.json
+*_result.json
+
+# Sistema operativo / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

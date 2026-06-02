@@ -1,0 +1,28 @@
+# Ambienti virtuali e build locali (pesanti, ricostruiti da requirements.txt)
+.venv-cuda/
+.venv/
+venv/
+Distribuzione Windows/
+dist/
+build/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Backup e artefatti
+*.bak
+*.bak-*
+*.log
+
+# Git e IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# File di documentazione non necessari nell'immagine
+*.md

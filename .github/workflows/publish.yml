@@ -1,0 +1,33 @@
+name: publish
+
+# Pubblica su PyPI quando viene pubblicata una Release su GitHub.
+# workflow_dispatch permette anche un lancio manuale (utile per la prima volta).
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pypi-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # richiesto dal Trusted Publishing di PyPI (OIDC)
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build distributions (sdist + wheel)
+        run: |
+          python -m pip install --upgrade build
+          python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

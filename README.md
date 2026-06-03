@@ -7,6 +7,7 @@
 </p>
 
 <p align="center">
+  <a href="https://pypi.org/project/quantuma-core/"><img src="https://img.shields.io/pypi/v/quantuma-core" alt="PyPI version"></a>
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
   <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
   <img src="https://github.com/ShinRalexis/QuantumA-Core/actions/workflows/tests.yml/badge.svg" alt="Tests">
@@ -50,9 +51,22 @@ HTTP.
 - PyTorch with CUDA (optional, for GPU acceleration)
 - FastAPI + Uvicorn (for the REST API)
 
+Install as a library from PyPI:
+
+```bash
+pip install quantuma-core          # core (NumPy only)
+pip install "quantuma-core[gpu]"   # + PyTorch (GPU acceleration)
+pip install "quantuma-core[api]"   # + FastAPI REST server
+```
+
+Or, from a clone of the repository:
+
 ```bash
 pip install -r requirements.txt
 ```
+
+> For the CUDA build of PyTorch, install `torch` separately following the
+> instructions at <https://pytorch.org> (the CUDA index is platform-specific).
 
 ---
 
@@ -314,9 +328,22 @@ applicazioni tramite HTTP.
 - PyTorch con CUDA (opzionale, per l'accelerazione GPU)
 - FastAPI + Uvicorn (per l'API REST)
 
+Installazione come libreria da PyPI:
+
+```bash
+pip install quantuma-core          # core (solo NumPy)
+pip install "quantuma-core[gpu]"   # + PyTorch (accelerazione GPU)
+pip install "quantuma-core[api]"   # + server REST FastAPI
+```
+
+Oppure, da un clone del repository:
+
 ```bash
 pip install -r requirements.txt
 ```
+
+> Per la build CUDA di PyTorch, installa `torch` separatamente seguendo le
+> istruzioni su <https://pytorch.org> (l'indice CUDA dipende dalla piattaforma).
 
 ---
 

@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantuma-core"
+dynamic = ["version"]
+description = "GPU-accelerated quantum circuit simulator with realistic noise models and a REST API"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "MetaDarko", email = "MetaDarko@pm.me" }]
+keywords = [
+    "quantum-computing",
+    "quantum-simulator",
+    "statevector",
+    "vqe",
+    "cuda",
+    "nisq",
+    "quantum-chemistry",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: OS Independent",
+]
+
+# Il core della libreria richiede solo NumPy.
+dependencies = [
+    "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+# Accelerazione GPU. NOTA: questo installa PyTorch dal PyPI (build CPU). Per la
+# build CUDA, installare torch separatamente seguendo le istruzioni di
+# https://pytorch.org (l'indice CUDA dipende dalla piattaforma e non e'
+# gestibile in modo affidabile da pip).
+gpu = ["torch"]
+
+# Server REST opzionale (FastAPI). Non serve per usare il simulatore come libreria.
+api = ["fastapi", "uvicorn[standard]"]
+
+[project.urls]
+Homepage = "https://github.com/ShinRalexis/QuantumA-Core"
+Repository = "https://github.com/ShinRalexis/QuantumA-Core"
+Issues = "https://github.com/ShinRalexis/QuantumA-Core/issues"
+
+# La versione e' letta da quantum_core/__init__.py (__version__): fonte unica.
+[tool.hatch.version]
+path = "quantum_core/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["quantum_core"]

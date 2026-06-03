@@ -9,7 +9,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
   <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
-  <img src="https://img.shields.io/badge/tests-35%2F35-success" alt="Tests 35/35">
+  <img src="https://github.com/ShinRalexis/QuantumA-Core/actions/workflows/tests.yml/badge.svg" alt="Tests">
   <img src="https://img.shields.io/badge/GPU-CUDA%20(optional)-76b900" alt="CUDA optional">
 </p>
 

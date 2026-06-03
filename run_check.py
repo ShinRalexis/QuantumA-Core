@@ -284,3 +284,6 @@ print()
 print('=' * 60)
 print(f'  CHECK COMPLETE:  {PASS} passed  |  {FAIL} failed')
 print('=' * 60)
+
+# Exit code non-zero se almeno un test fallisce (utile per CI/CD).
+sys.exit(1 if FAIL else 0)

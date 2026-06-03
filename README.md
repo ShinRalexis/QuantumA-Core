@@ -16,6 +16,8 @@
 
 # QuantumA Core
 
+**Local, GPU-first, REST API, zero cloud-vendor lock-in.**
+
 A quantum circuit simulator that runs on classical hardware, with optional GPU
 (CUDA) acceleration and a REST API. It lets you build, run, and analyze quantum
 circuits with realistic noise models, automatically choosing between GPU and CPU
@@ -291,6 +293,8 @@ Support page: [liberapay.com/MetaDarko](https://liberapay.com/MetaDarko)
 </p>
 
 # QuantumA Core (Italiano)
+
+**Locale, GPU-first, REST API, zero dipendenza da cloud vendor.**
 
 Simulatore di circuiti quantistici su hardware classico, con accelerazione GPU
 (CUDA) opzionale e API REST. Permette di costruire, eseguire e analizzare

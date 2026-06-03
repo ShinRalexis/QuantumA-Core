@@ -26,7 +26,7 @@ algorithms before running them on real hardware, to study the effect of noise on
 NISQ circuits, and to integrate quantum simulation into other applications over
 HTTP.
 
-> Status: stable — 35/35 functional tests passing. GPU-first backend selection:
+> Status: stable, 35/35 functional tests passing. GPU-first backend selection:
 > up to 28 qubits on an 8 GB GPU, automatic CPU fallback beyond.
 
 ---
@@ -72,7 +72,7 @@ pip install -r requirements.txt
 
 ## Quick start
 
-### Option A — Docker (recommended)
+### Option A: Docker (recommended)
 
 ```bash
 docker compose up -d --build
@@ -81,7 +81,7 @@ docker compose up -d --build
 The API is available at `http://localhost:8227` (docs at `/docs`). The GPU
 backend activates only if the container sees CUDA; otherwise it stays on CPU.
 
-### Option B — Local
+### Option B: Local
 
 ```bash
 python run_check.py      # verification suite (35 tests)
@@ -166,15 +166,15 @@ All must report `[OK]`.
 
 ## Use cases
 
-1. **Teaching and learning** — build and inspect circuits, Bell/GHZ states, known
+1. **Teaching and learning**: build and inspect circuits, Bell/GHZ states, known
    algorithms (Grover, QFT), with ASCII rendering and probabilities.
-2. **NISQ algorithm prototyping** — verify an algorithm in ideal mode
+2. **NISQ algorithm prototyping**: verify an algorithm in ideal mode
    (statevector) and then under realistic noise before porting it to real
    hardware.
-3. **Noise studies** — compare ideal execution with density matrix / Monte Carlo
+3. **Noise studies**: compare ideal execution with density matrix / Monte Carlo
    across the four hardware profiles.
-4. **Quantum chemistry** — VQE for molecular energies (see the H₂ example).
-5. **Integration into other applications** — any software can use quantum
+4. **Quantum chemistry**: VQE for molecular energies (see the H₂ example).
+5. **Integration into other applications**: any software can use quantum
    simulation over HTTP, without depending on a specific vendor's ecosystem.
 
 ---
@@ -232,7 +232,7 @@ molecular_chemistry_test.py  # real example: VQE for H₂
 
 ## Projects using QuantumA Core
 
-- **Silly Quantum** — an extension for [SillyTavern](https://github.com/SillyTavern/SillyTavern)
+- **Silly Quantum**: an extension for [SillyTavern](https://github.com/SillyTavern/SillyTavern)
   that uses the entropy of real quantum circuits (via the QuantumA Core API) to
   modulate characters' emotional state in roleplay. An example of downstream
   integration over REST.
@@ -262,7 +262,7 @@ molecular_chemistry_test.py  # real example: VQE for H₂
 
 ## License
 
-QuantumA Core is released under the **MIT License** — free and open source. You
+QuantumA Core is released under the **MIT License**, free and open source. You
 are free to use, modify, and distribute it (including commercially), as long as
 the copyright notice is retained. See the [LICENSE](LICENSE) file.
 
@@ -302,7 +302,7 @@ algoritmi quantistici prima di eseguirli su hardware reale, studiare l'effetto
 del rumore su circuiti NISQ, e integrare la simulazione quantistica in altre
 applicazioni tramite HTTP.
 
-> Stato: stabile — 35/35 test funzionali passati. Selezione backend GPU-first:
+> Stato: stabile, 35/35 test funzionali passati. Selezione backend GPU-first:
 > fino a 28 qubit su una GPU da 8 GB, fallback automatico su CPU oltre.
 
 ---
@@ -349,7 +349,7 @@ pip install -r requirements.txt
 
 ## Avvio rapido
 
-### Opzione A — Docker (consigliata)
+### Opzione A: Docker (consigliata)
 
 ```bash
 docker compose up -d --build
@@ -358,7 +358,7 @@ docker compose up -d --build
 L'API è disponibile su `http://localhost:8227` (documentazione su `/docs`).
 Il backend GPU si attiva solo se il container vede CUDA; altrimenti resta su CPU.
 
-### Opzione B — Locale
+### Opzione B: Locale
 
 ```bash
 python run_check.py      # suite di verifica (35 test)
@@ -443,15 +443,15 @@ le modalità del simulatore. Tutti devono risultare `[OK]`.
 
 ## Casi d'uso
 
-1. **Didattica e apprendimento** — costruire e ispezionare circuiti, stati di
+1. **Didattica e apprendimento**: costruire e ispezionare circuiti, stati di
    Bell/GHZ, algoritmi noti (Grover, QFT), con rendering ASCII e probabilità.
-2. **Prototipazione di algoritmi NISQ** — verificare un algoritmo in modalità
+2. **Prototipazione di algoritmi NISQ**: verificare un algoritmo in modalità
    ideale (statevector) e poi sotto rumore realistico prima di portarlo su
    hardware reale.
-3. **Studio del rumore** — confrontare l'esecuzione ideale con density matrix /
+3. **Studio del rumore**: confrontare l'esecuzione ideale con density matrix /
    Monte Carlo sui quattro profili hardware.
-4. **Chimica quantistica** — VQE per energie molecolari (vedi l'esempio H₂).
-5. **Integrazione in altre applicazioni** — qualsiasi software può usare la
+4. **Chimica quantistica**: VQE per energie molecolari (vedi l'esempio H₂).
+5. **Integrazione in altre applicazioni**: qualsiasi software può usare la
    simulazione quantistica via HTTP, senza dipendere dall'ecosistema di un
    vendor specifico.
 
@@ -510,7 +510,7 @@ molecular_chemistry_test.py  # esempio reale: VQE per H₂
 
 ## Progetti che usano QuantumA Core
 
-- **Silly Quantum** — estensione per [SillyTavern](https://github.com/SillyTavern/SillyTavern)
+- **Silly Quantum**: estensione per [SillyTavern](https://github.com/SillyTavern/SillyTavern)
   che usa l'entropia di circuiti quantistici reali (via l'API di QuantumA Core)
   per modulare lo stato emotivo dei personaggi nel roleplay. Esempio di
   integrazione downstream tramite REST.
@@ -541,7 +541,7 @@ molecular_chemistry_test.py  # esempio reale: VQE per H₂
 
 ## Licenza
 
-QuantumA Core è rilasciato con licenza **MIT** — libera e open source. Sei libero
+QuantumA Core è rilasciato con licenza **MIT**, libera e open source. Sei libero
 di usarlo, modificarlo e distribuirlo (anche commercialmente), purché venga
 mantenuta la nota di copyright. Vedi il file [LICENSE](LICENSE).
 

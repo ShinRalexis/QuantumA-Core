@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="Logo.png" alt="QuantumA Core" width="220">
 </p>
 
@@ -234,10 +234,24 @@ molecular_chemistry_test.py  # real example: VQE for H₂
 
 ## Projects using QuantumA Core
 
-- **Silly Quantum**: an extension for [SillyTavern](https://github.com/SillyTavern/SillyTavern)
-  that uses the entropy of real quantum circuits (via the QuantumA Core API) to
-  modulate characters' emotional state in roleplay. An example of downstream
-  integration over REST.
+- **[Silly Quantum](https://github.com/ShinRalexis/Silly-Quantum)**: a SillyTavern
+  extension that uses QuantumA Core as a narrative engine for AI character roleplay.
+  On every message, it builds a 6-qubit circuit whose RY rotation angles are shaped
+  by contextual keywords extracted from the conversation: tension, strength and
+  vulnerability keywords bend the angles before the circuit runs, so the narrative
+  context literally deforms the probability landscape of the circuit. CNOT entanglement
+  gates couple adjacent qubit pairs, making the 6 output bits non-independent: the
+  circuit geometry creates correlations between emotional dimensions that a flat
+  random function cannot reproduce. The dominant state of the resulting superposition
+  (`bitstring_final`, the argmax of |psi|^2) maps to one of 64 named emotional states,
+  which is injected into the LLM prompt before generation.
+
+  A note from the author: the randomness is seeded by `Math.random()` in JavaScript,
+  not by quantum measurement. The quantum simulation adds the mathematical
+  transformation: the circuit shapes which states are reachable and probable, it does
+  not generate the initial seed. The project started as a personal experiment to see
+  whether quantum circuit mathematics could produce more interesting mood transitions
+  than a plain random number generator.
 
 ---
 
@@ -514,10 +528,25 @@ molecular_chemistry_test.py  # esempio reale: VQE per H₂
 
 ## Progetti che usano QuantumA Core
 
-- **Silly Quantum**: estensione per [SillyTavern](https://github.com/SillyTavern/SillyTavern)
-  che usa l'entropia di circuiti quantistici reali (via l'API di QuantumA Core)
-  per modulare lo stato emotivo dei personaggi nel roleplay. Esempio di
-  integrazione downstream tramite REST.
+- **[Silly Quantum](https://github.com/ShinRalexis/Silly-Quantum)**: estensione per
+  SillyTavern che usa QuantumA Core come motore narrativo per il roleplay con
+  personaggi AI. A ogni messaggio costruisce un circuito a 6 qubit i cui angoli di
+  rotazione RY sono modellati da keyword contestuali estratte dalla conversazione:
+  keyword di tensione, forza e vulnerabilita piegano gli angoli prima che il circuito
+  venga eseguito, quindi il contesto narrativo deforma letteralmente il paesaggio
+  probabilistico del circuito. Gate CNOT a coppie accoppiano i qubit adiacenti,
+  rendendo i 6 bit di output non indipendenti: la geometria del circuito crea
+  correlazioni tra dimensioni emotive che un semplice generatore casuale non puo
+  riprodurre. Lo stato dominante della sovrapposizione risultante (`bitstring_final`,
+  l'argmax di |psi|^2) viene mappato su uno dei 64 stati emotivi nominati, iniettati
+  nel prompt dell'LLM prima della generazione.
+
+  Nota dell'autore: la casualita e generata da `Math.random()` in JavaScript, non
+  dalla misurazione quantistica. La simulazione quantistica aggiunge la trasformazione
+  matematica: il circuito modella quali stati sono raggiungibili e con quale
+  probabilita, non genera il seme iniziale. Il progetto e nato come esperimento
+  personale per verificare se la matematica dei circuiti quantistici potesse produrre
+  transizioni di stato emotivo piu interessanti di un semplice numero casuale.
 
 ---
 

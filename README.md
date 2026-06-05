@@ -590,3 +590,4 @@ sostenerne lo sviluppo con una donazione:
 [![Liberapay](https://img.shields.io/badge/Liberapay-Sostieni-yellow)](https://liberapay.com/MetaDarko)
 
 Pagina di supporto: [liberapay.com/MetaDarko](https://liberapay.com/MetaDarko)
+
